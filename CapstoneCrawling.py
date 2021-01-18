@@ -11,7 +11,7 @@ i = input('몇페이지 크롤링 할까요? : ')
 
 lastPage = int(i) * 10 - 9
 while pageNum < lastPage + 1:
-    url = f'https://search.naver.com/search.naver?date_from=&date_option=0&date_to=&dup_remove=1&nso=&post_blogurl=&post_blogurl_without=&query={plusUrl}&sm=tab_pge&srchby=all&st=sim&where=post&start={pageNum}'
+    url = 'https://search.naver.com/search.naver?date_from=&date_option=0&date_to=&dup_remove=1&nso=&post_blogurl=&post_blogurl_without=&query={plusUrl}&sm=tab_pge&srchby=all&st=sim&where=post&start={pageNum}'
 
     html = urllib.request.urlopen(url).read()
     soup = BeautifulSoup(html, 'html.parser')
